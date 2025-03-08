@@ -6,12 +6,18 @@
 
 ---
 
-- NextJS
+- NextJS 14
+- React 18
 - React Query
-- Material TailwindCss
+- Material TailwindCss 2.1.10
 - Supabase
 
 ---
+
+### 강의와 다르게 한 점
+
+투두리스트 업데이트 시 내용이 변경되지 않는다면 서버에 업데이트 해주지 않고 UI 만 변경 시킴
+내용 변경 확인하는 로직을 추가시켰습니다.
 
 ### 어려운 상황
 
