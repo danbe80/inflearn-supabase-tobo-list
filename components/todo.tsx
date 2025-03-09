@@ -34,16 +34,12 @@ export default function Todo({ todo }) {
         id: todo.id,
         title: content,
         completed,
-        // updated_at: new Date().toString(),
       }),
     onSuccess: () => {
       setIsEditing(false);
       queryClient.invalidateQueries({
         queryKey: ["todos"],
       });
-    },
-    onError(error, variables, context) {
-      console.log(error);
     },
   });
 
