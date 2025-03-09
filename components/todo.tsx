@@ -11,6 +11,7 @@ export default function Todo({ todo }) {
   const [completed, setCompleted] = useState(todo.completed);
   const [date, setDate] = useState(todo.created_at);
   const [content, setContent] = useState(todo.title);
+  const [more, setMore] = useState(todo.title.length > 60);
   // UTC => KST 날짜 포맷 함수
   function formatDate(date) {
     const createAt = new Date(date);
@@ -24,7 +25,7 @@ export default function Todo({ todo }) {
       koreaDate.getHours() == 0
         ? "24"
         : koreaDate.getHours().toString().padStart(2, "0")
-    }:${koreaDate.getMinutes()}`;
+    }:${koreaDate.getMinutes().toString().padStart(2, "0")}`;
   }
 
   const updateTodoMutation = useMutation({
@@ -89,7 +90,7 @@ export default function Todo({ todo }) {
         />
       ) : (
         <div className="relative flex-1">
-          <span className="text-xs absolute bottom-5 text-gray-600">
+          <span className="text-xs bottom-5 text-gray-600">
             {todo.updated_at ? (
               <>
                 {formatDate(todo.updated_at)}
@@ -99,7 +100,21 @@ export default function Todo({ todo }) {
               formatDate(todo.created_at)
             )}
           </span>
-          <p className={`flex-1 ${completed && "line-through"}`}>{content}</p>
+          <p className={`flex-1 ${completed && "line-through"}`}>
+            {more ? (
+              <>
+                {content.slice(0, 60)}...
+                <button
+                  className="text-gray-500 underline text-sm"
+                  onClick={() => setMore(false)}
+                >
+                  more
+                </button>
+              </>
+            ) : (
+              content
+            )}
+          </p>
         </div>
       )}
 

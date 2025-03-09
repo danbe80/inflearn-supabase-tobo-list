@@ -27,8 +27,8 @@ export default function UI() {
   });
 
   return (
-    <div className="w-2/3 mx-auto flex flex-col items-center py-10 gap-3">
-      <h1 className="text-lg font-bold">🍀 TODO LIST</h1>
+    <div className="w-3/4 mx-auto flex flex-col items-center py-10 gap-3">
+      <h1 className={`text-xl font-bold`}>🍀 TODO LIST</h1>
       <Input
         label="Search TODO"
         placeholder="Search TODO"
@@ -36,8 +36,6 @@ export default function UI() {
         value={searchInput}
         onChange={(e) => setSearchInput(e.target.value)}
       />
-
-      {/* <Todo /> */}
 
       {todosQuery.isPending && <p>Loading...</p>}
 

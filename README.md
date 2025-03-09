@@ -6,13 +6,24 @@
 
 ---
 
-- NextJS 14
-- React 18
+- NextJS 14^
+- React 18^
 - React Query
 - Material TailwindCss 2.1.10
 - Supabase
 
 ---
+
+### 기능 확인
+
+![Image](https://github.com/user-attachments/assets/c6ecc510-532e-4082-9b38-59189a0b0539)
+
+### 주요기능
+
+1. TODO List 조회
+2. TODO Create
+3. TODO Update
+4. TODO Delete
 
 ### 강의와 다르게 한 점
 
