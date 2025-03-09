@@ -37,7 +37,7 @@
 업데이트 시 변경 내용이 기존 내용과 같을 경우,
 즉 변경 사항이 없을 경우 업데이트가 일어나지 않게 코드를 변경하였습니다.
 
-<img width="356" alt="Image" src="https://github.com/user-attachments/assets/594b85e8-e6ca-4846-baec-a04ee5e40d31" />
+<img width="356" alt="Image" src="https://github.com/user-attachments/assets/0d490763-6c93-41cf-9be3-2ff3b4ba4d47" />
 
 1. TODO Delete
 
